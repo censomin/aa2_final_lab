@@ -1,18 +1,26 @@
 ---
 
-mysql_info:
-  user: devops
-  privilege: "*.*:ALL,GRANT"
-  database: userdb
-  password: redhat
-  backupfile: userdb.backup
+postgres_info:
+  postgres_user: postgres
+  postgres_users:
+    - name: flask
+      password: redhat
+      database: flask_db
+      state: present
+      priv: ALL
+  postgres_databases:
+    - name: flask_db
+      owner: flask
+    - name: books_store
+      owner: flask
 
-mysql_packages:
-  - mariadb
-  - mariadb-server
-  - python3-PyMySQL
+postgres_packages:
+  - postgresql10 
+  - postgresql10-server 
+  - postgresql10-contrib 
+  - postgresql10-libs
 
-mysql_services: 
-  - mariadb
+postgres_services: 
+  - postgresql-10.service
 
 ...
