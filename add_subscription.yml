@@ -1,12 +1,12 @@
 - hosts: control
-  vars:
-    rhsm_activationkey: gpte-labs-rhel8
-    rhsm_org_id: prod
   tasks:
     - debug:
       
 - name: Add subscription
   hosts: load_balancers,database_servers,backend_servers
+  vars:
+    rhsm_activationkey: gpte-labs-rhel8
+    rhsm_org_id: prod
   gather_facts: true
   tasks:
     - debug:
