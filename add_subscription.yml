@@ -32,7 +32,7 @@
 
     - name: register system and attach subs
       redhat_subscription:
-        activationkey: {{ rhsm_activationkey }}
+        activationkey: "{{ rhsm_activationkey }}"
         state:   present
         org_id: {{ rhsm_org_id }}
         username: "admin"
