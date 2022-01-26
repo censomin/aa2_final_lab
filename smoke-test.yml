@@ -1,4 +1,4 @@
-- hosts: control_node
+- hosts: load_balancers
   gather_facts: false
   tasks:
     - name: os_server_info
