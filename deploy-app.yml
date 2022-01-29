@@ -18,7 +18,7 @@
   become: true
   gather_facts: true
   tags:
-    - application_servers
+    - app_servers
 
   roles:
 
