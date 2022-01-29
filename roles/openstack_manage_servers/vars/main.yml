@@ -1,5 +1,8 @@
 ---
 openstack_instances: 
+  vars:
+    GUID: "{{ lookup('ENV','GUID') }}"
+
   - instance_name: app1
     AnsibleGroup: app_servers
     deployment: prod
