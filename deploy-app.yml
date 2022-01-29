@@ -14,7 +14,7 @@
     - postgres
 
 - name: Deploy, configure, and populate flask repo and virtualenv
-  hosts: backend_servers
+  hosts: app_servers
   become: true
   gather_facts: true
   tags:
