@@ -1,7 +1,7 @@
 ---
-tasks:
+  tasks:
 
- - name: Smoketest Postgres database
+  - name: Smoketest Postgres database
       postgresql_ping:
         db: flask_db
         login_host: "{{ groups.database_servers[0] }}"
